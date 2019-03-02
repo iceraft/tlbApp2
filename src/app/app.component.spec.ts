@@ -50,8 +50,11 @@ describe('AppComponent', () => {
     const app = fixture.nativeElement;
     const menuItems = app.querySelectorAll('ion-label');
     expect(menuItems.length).toEqual(2);
-    expect(menuItems[0].textContent).toContain('Home');
-    expect(menuItems[1].textContent).toContain('List');
+    expect(menuItems[0].textContent).toContain('Profile');
+    expect(menuItems[1].textContent).toContain('Workout');
+    expect(menuItems[2].textContent).toContain('Reminder');
+    expect(menuItems[3].textContent).toContain('Settings');
+    expect(menuItems[4].textContent).toContain('Logout');
   });
 
   it('should have urls', async () => {
@@ -59,9 +62,12 @@ describe('AppComponent', () => {
     await fixture.detectChanges();
     const app = fixture.nativeElement;
     const menuItems = app.querySelectorAll('ion-item');
-    expect(menuItems.length).toEqual(2);
-    expect(menuItems[0].getAttribute('ng-reflect-router-link')).toEqual('/home');
-    expect(menuItems[1].getAttribute('ng-reflect-router-link')).toEqual('/list');
+    expect(menuItems.length).toEqual(5);
+    expect(menuItems[0].getAttribute('ng-reflect-router-link')).toEqual('/profile');
+    expect(menuItems[1].getAttribute('ng-reflect-router-link')).toEqual('/h-wkout');
+    expect(menuItems[2].getAttribute('ng-reflect-router-link')).toEqual('/alarms');
+    expect(menuItems[3].getAttribute('ng-reflect-router-link')).toEqual('/setting');
+    expect(menuItems[4].getAttribute('ng-reflect-router-link')).toEqual('/login');
   });
 
 });

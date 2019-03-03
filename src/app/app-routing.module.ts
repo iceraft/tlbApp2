@@ -24,7 +24,8 @@ const routes: Routes = [
   { path: 'p-wkout', loadChildren: './p-wkout/p-wkout.module#PWkoutPageModule' },
   { path: 'alarms', loadChildren: './alarms/alarms.module#AlarmsPageModule' },
   { path: 'a-alarms', loadChildren: './a-alarms/a-alarms.module#AAlarmsPageModule' },
-  { path: 'e-alarms', loadChildren: './e-alarms/e-alarms.module#EAlarmsPageModule' }
+  { path: 'e-alarms', loadChildren: './e-alarms/e-alarms.module#EAlarmsPageModule' },
+  { path: 'terms-nc', loadChildren: './terms-nc/terms-nc.module#TermsNcPageModule' }
 ];
 
 @NgModule({

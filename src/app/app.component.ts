@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-root',
@@ -29,21 +30,27 @@ export class AppComponent {
       title: 'Settings',
       url: '/setting',
       icon: 'settings'
-    },
-    {
-      title: 'Logout',
-      url: '/login',
-      icon: 'log-out'
-    }
+    }//,
+    //{
+    //  title: 'Logout',
+    //  url: '/login',
+    //  icon: 'log-out'
+    //}
 
   ];
 
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    public afAuth: AngularFireAuth,
   ) {
     this.initializeApp();
+    }
+   signOut() {
+    this.afAuth.auth.signOut().then(() => {
+      location.reload();
+    });
   }
 
   initializeApp() {

@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FirebaseUIModule, firebase, firebaseui } from 'firebaseui-angular';
 
 import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule} from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 
@@ -34,6 +35,7 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     IonicModule.forRoot(),
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule.enablePersistence(),
     AngularFireAuthModule,
     FirebaseUIModule.forRoot(firebaseUiAuthConfig)
   ],

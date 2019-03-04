@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'e-wkout', loadChildren: './e-wkout/e-wkout.module#EWkoutPageModule' },
 
   { path: 's-wkout', loadChildren: './s-wkout/s-wkout.module#SWkoutPageModule' },
+  { path: 's-wkout/:id', loadChildren: './s-wkout/s-wkout.module#SWkoutPageModule' },
   
   { path: 'p-wkout', loadChildren: './p-wkout/p-wkout.module#PWkoutPageModule' },
   { path: 'alarms', loadChildren: './alarms/alarms.module#AlarmsPageModule' },

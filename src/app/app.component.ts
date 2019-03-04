@@ -5,6 +5,9 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AngularFireAuth } from '@angular/fire/auth';
 
+import { Router } from '@angular/router';
+import { HWkoutPage } from '/h-wkout/h-wkout';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
@@ -28,7 +31,7 @@ export class AppComponent {
     },
     {
       title: 'Settings',
-      url: '/setting',
+      url: '/settings',
       icon: 'settings'
     }
 
@@ -39,10 +42,12 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     public afAuth: AngularFireAuth,
+    private router: Router,
   ) {
     this.initializeApp();
     }
    signOut() {
+   this.router.navigate(['/']);
     this.afAuth.auth.signOut().then(() => {
       location.reload();
     });

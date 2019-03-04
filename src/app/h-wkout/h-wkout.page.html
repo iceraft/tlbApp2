@@ -1,14 +1,14 @@
 <ion-header>
-  <ion-toolbar color="dark">
-	<ion-buttons slot="start">
+<ion-toolbar color="dark">
+	<ion-buttons slot="start" *ngIf="afAuth.auth.currentUser">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>
-      Workout
+    <ion-title *ngIf="afAuth.auth.currentUser">
+      Home 
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content padding>
-
+<ion-content  padding>
+	<firebase-ui></firebase-ui>
 </ion-content>
+

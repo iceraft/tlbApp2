@@ -30,12 +30,7 @@ export class AppComponent {
       title: 'Settings',
       url: '/setting',
       icon: 'settings'
-    }//,
-    //{
-    //  title: 'Logout',
-    //  url: '/login',
-    //  icon: 'log-out'
-    //}
+    }
 
   ];
 

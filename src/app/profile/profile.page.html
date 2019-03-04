@@ -1,14 +1,11 @@
 <ion-header>
 <ion-toolbar color="dark">
-	<ion-buttons slot="start" *ngIf="afAuth.auth.currentUser">
+	<ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title *ngIf="afAuth.auth.currentUser">
-      Welcome {{afAuth.auth.currentUser.displayName}}!
+    <ion-title>
+      Profile
     </ion-title>
-<!--     <ion-title *ngIfElse="afAuth.auth.currentUser">
-      Login
-    </ion-title> -->
   </ion-toolbar>
 </ion-header>
 

@@ -67,7 +67,6 @@ describe('AppComponent', () => {
     expect(menuItems[1].getAttribute('ng-reflect-router-link')).toEqual('/h-wkout');
     expect(menuItems[2].getAttribute('ng-reflect-router-link')).toEqual('/alarms');
     expect(menuItems[3].getAttribute('ng-reflect-router-link')).toEqual('/setting');
-    expect(menuItems[4].getAttribute('ng-reflect-router-link')).toEqual('/login');
   });
 
 });

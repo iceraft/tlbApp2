@@ -4,11 +4,9 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'profile',
+    redirectTo: 'h-wkout',
     pathMatch: 'full'
   },
-  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
-
   { path: 'profile', loadChildren: './profile/profile.module#ProfilePageModule' },
 
   { path: 'settings', loadChildren: './settings/settings.module#SettingsPageModule' },
@@ -25,7 +23,8 @@ const routes: Routes = [
   { path: 'alarms', loadChildren: './alarms/alarms.module#AlarmsPageModule' },
   { path: 'a-alarms', loadChildren: './a-alarms/a-alarms.module#AAlarmsPageModule' },
   { path: 'e-alarms', loadChildren: './e-alarms/e-alarms.module#EAlarmsPageModule' },
-  { path: 'terms-nc', loadChildren: './terms-nc/terms-nc.module#TermsNcPageModule' }
+  { path: 'terms-nc', loadChildren: './terms-nc/terms-nc.module#TermsNcPageModule' },
+  { path: 'e-prof', loadChildren: './e-prof/e-prof.module#EProfPageModule' }
 ];
 
 @NgModule({

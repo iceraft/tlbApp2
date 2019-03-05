@@ -6,7 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 import { Router } from '@angular/router';
-import { HWkoutPage } from '/h-wkout/h-wkout';
+import { HWkoutPage } from './workout';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +21,7 @@ export class AppComponent {
     },
     {
       title: 'Workout',
-      url: '/h-wkout',
+      url: '/workout',
       icon: 'walk'
     },
     {

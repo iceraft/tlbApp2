@@ -1,9 +1,20 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>s_wkout</ion-title>
+  <ion-toolbar color="black">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/'"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Something</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-
+	<ion-list lines="full">
+    <ion-item>
+      <ion-input required type="text" placeholder="Task" [(ngModel)]="test.task"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input required type="number" placeholder="Priority" [(ngModel)]="test.priority"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="saveTest()">Save</ion-button>
 </ion-content>

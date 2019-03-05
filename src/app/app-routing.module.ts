@@ -4,14 +4,14 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'h-wkout',
+    redirectTo: 'workout',
     pathMatch: 'full'
   },
   { path: 'profile', loadChildren: './profile/profile.module#ProfilePageModule' },
 
   { path: 'settings', loadChildren: './settings/settings.module#SettingsPageModule' },
 
-  { path: 'h-wkout', loadChildren: './workout/h-wkout.module#HWkoutPageModule' },
+  { path: 'workout', loadChildren: './workout/h-wkout.module#HWkoutPageModule' },
 
   { path: 'a-wkout', loadChildren: './workout/a-wkout/a-wkout.module#AWkoutPageModule' },
 
